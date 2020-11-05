@@ -5,7 +5,7 @@ function help(){
 }
 
 function info(){
-    window.alert('Mijn naam is Tomas Ruiters');
+    window.alert('Mijn naam is Tomas ');
 }
 
 function info2(){
