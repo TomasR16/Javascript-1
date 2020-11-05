@@ -32,6 +32,6 @@ test.setAttribute("value", "Touch");
 document.getElementById("formulier").appendChild(test);
 
 function help(){
-    alert('Javascript oelah');
+    alert('Javascript ');
 }
 
