@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 7</title>
+</head>
+<body>
+
+    <h3> Tomas Ruiters </h3>
+
+    <button class="center" id="knopie" type="submit">Info</button>
+    <p id="output"></p>
+
+    <script>
+            
+        var geboortedatum = "16-03-2003";
+        var woonplaats = "Drente-Assen";
+
+        var output = ""; 
+        var toon = false;
+
+        var button = document.getElementById("knopie").addEventListener('click', function(e){
+            // e.preventDefault();
+            var output = document.getElementById('output'); 
+            if(!toon){
+                output.innerHTML = "geboortdatum: " + geboortedatum + "<br><br>" + "Woonplaats: "  + woonplaats;
+                this.innerHTML = "verberg";
+            } else {
+                output.innerHTML = "";
+                this.innerHTML  = "Info";
+            }
+            toon = !toon;
+            console.log("voltooid");
+        });
+
+
+
+
+
+    </script>
+    
+
+
+
+    
+</body>
+</html>

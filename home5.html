@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<!--<div id="tekst" style="background-color:lightgrey" onmouseout="normaal()" onmouseover="italic()" onclick="vertaal()">Hello World!</div> -->
+<div id="tekst" style="background-color:lightgrey">Hello World!</div>
+
+
+
+
+
+<script>
+
+document.getElementById("tekst").addEventListener("click", function(){
+    if(this.innerHTML == "Hello World!"){
+        this.innerHTML = "Hallo Wereld";
+    } else{
+        this.innerHTML = "Hello World!";
+    }
+});
+
+document.getElementById("tekst").addEventListener("mouseover", function(){
+    this.style.fontStyle = "italic";
+    
+});
+document.getElementById("tekst").addEventListener("mouseout", function(){
+    this.style.fontStyle = "";
+
+});
+
+
+
+
+</script>
+
+</body>
+</html>

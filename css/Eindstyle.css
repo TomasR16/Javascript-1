@@ -1,0 +1,28 @@
+table{
+    float: left;
+    width: 50%;
+    height: 50%;
+    border: 2px black solid;
+    border-spacing: 50%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tr{
+    height: 100px;
+    border: 1px black solid;
+}
+
+td{
+    width: 100px; 
+    border: 1px black solid;
+} 
+
+#blok{
+
+    position: absolute;
+    top: 200px;
+    right: 1%;
+    left: 500px;
+    
+}

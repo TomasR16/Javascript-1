@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht8</title>
+</head>
+<body>
+        <div id="Naam" style="background-color: red;">Klik op de div om een naam te voegen</div>
+
+    <script>
+        
+        var personen = [];
+        var div = document.getElementById("Naam").addEventListener('click' , function(){
+
+            var persoon = prompt("Welke naam wilt u voegen: " , "");
+            if(persoon != null){
+                personen[personen.length] = persoon;
+                document.getElementById("Naam").innerHTML = personen;
+                
+                console.log("Gelukt!");
+            }
+        });
+
+    </script>
+</body>
+</html>

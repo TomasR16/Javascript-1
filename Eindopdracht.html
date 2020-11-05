@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="css/Eindstyle.css">
+</head>
+<body>
+    
+    <!-- Hier staan de tabellen voor de tabel -->
+    <div id="blok">
+        <table>
+            <tr>
+                <td id="1" onclick="boter(1)"></td>
+                <td id="2" onclick="boter(2)"></td>
+                <td id="3" onclick="boter(3)"></td>
+            </tr>
+            <tr>
+                <td id="4" onclick="boter(4)"></td>
+                <td id="5" onclick="boter(5)"></td>
+                <td id="6" onclick="boter(6)"></td>
+            </tr>
+            <tr>
+                <td id="7" onclick="boter(7)"></td>
+                <td id="8" onclick="boter(8)"></td>
+                <td id="9" onclick="boter(9)"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        
+        var beurt = 0;
+        
+        
+        //hier begint de functie voor wie aan de beurt is 
+        function boter(geklikt){
+            
+            if(document.getElementById(geklikt).innerHTML == ""){
+                if(beurt == 0){
+                    document.getElementById(geklikt).innerHTML = "X";
+                    beurt++;
+                }else{
+                    document.getElementById(geklikt).innerHTML = "O";
+                    beurt--; 
+                }
+                rijen(geklikt);
+            }
+            
+        }
+        
+        //hier begint de functie voor het kijken van waar geklikt is 
+        function rijen(geklikt){
+            console.log("Gelukt");
+            
+            //verticaal
+            for(x = 1; x < 4;  x++){
+                
+                console.log("voltooid");
+                if( document.getElementById(x).innerHTML != "" && document.getElementById(x + 3).innerHTML != ""  && document.getElementById(x + 6).innerHTML != ""){
+                    
+                    if(document.getElementById(x).innerHTML == document.getElementById(x + 3).innerHTML){
+                        if(document.getElementById(x).innerHTML == document.getElementById(x + 6).innerHTML){
+                            alert("WINNAAR!");
+                        }
+                    }
+                }
+            }
+            
+            //horizontaal
+            for(y = 1; y < 8;  y = y+3){
+                
+                console.log("voltooid");
+                if( document.getElementById(y).innerHTML != "" && document.getElementById(y + 1).innerHTML != ""  && document.getElementById(y + 2).innerHTML != ""){
+                    
+                    if(document.getElementById(y).innerHTML == document.getElementById(y + 1).innerHTML){
+                        if(document.getElementById(y).innerHTML == document.getElementById(y + 2).innerHTML){
+                            alert("WINNAAR!");
+                            
+                        }
+                    }
+                }
+            } 
+            //diagonaal 1,5,9 en 3,5,7
+            if( document.getElementById(1).innerHTML != "" && document.getElementById(5).innerHTML != ""  && document.getElementById(9).innerHTML != ""){
+                
+                if(document.getElementById(1).innerHTML == document.getElementById(5).innerHTML){
+                    if(document.getElementById(1).innerHTML == document.getElementById(9).innerHTML){
+                        alert("WINNAAR!");
+                        
+                    }
+                }
+            }
+            
+            
+            if( document.getElementById(3).innerHTML != "" && document.getElementById(5).innerHTML != ""  && document.getElementById(7).innerHTML != ""){
+                
+                if(document.getElementById(3).innerHTML == document.getElementById(5).innerHTML){
+                    if(document.getElementById(3).innerHTML == document.getElementById(7).innerHTML){
+                        alert("WINNAAR!");
+                        
+                    }
+                }
+            }
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

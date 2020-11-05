@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title></title>
+
+  </head>
+
+  <body>
+
+
+<div class="divklik" id="een" style="background-color:red">Hello World!</div>
+<div class="divklik" id="twee" style="background-color:coral">Hello World!</div>
+<div class="divklik" id="drie" style="background-color:violet">Hello World!</div>
+<div class="divklik" id="vier" style="background-color:greenyellow">Hello World!</div>
+<div class="divklik" id="vijf" style="background-color:teal">Hello World!</div>
+
+  </body>
+
+ 
+
+  <script type="text/javascript">
+
+    window.addEventListener("load", function() {
+
+      function klik(e){
+        if(e.shiftKey){
+            	    //als met shift ingedrukt word dan zonder tekst
+          this.style.fontWeight = "";
+
+        } else {
+                // anders Bold 
+          this.style.fontWeight = "BOLD";
+
+        }
+
+      }
+
+    
+      divjes = document.getElementsByClassName("divklik");
+
+      for(var i =0; i<divjes.length; i++){
+          divjes[i].addEventListener("click", klik);
+      }
+
+
+      
+    //   document.getElementById("een").addEventListener("click", klik);
+    //   is ook een optie maar omdat er maar 1 ding in kan niet handig bij meerdere
+
+
+    //   document.getElementById("een" , "twee" , "drie" , "vier" , "vijf").addEventListener("click", function(e){
+
+    //     if(e.shiftKey){
+    //         	    //als met shift ingedrukt word dan zonder tekst
+    //       this.style.fontWeight = "";
+
+    //     } else {
+    //             // anders Bold 
+    //       this.style.fontWeight = "BOLD";
+
+    //     }
+
+    //   });
+
+    });
+
+ 
+
+  </script>
+
+</html>

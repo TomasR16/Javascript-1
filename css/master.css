@@ -1,0 +1,26 @@
+
+
+html, body {
+    border: 1px solid rgb(255, 0, 0);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+    border: 0 auto;
+
+}
+
+
+/*
+
+html{} voor alles 
+. {} is voor een class
+# {} is voor een id
+
+
+div {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+} */

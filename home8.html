@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Opdracht8</title>
+        <link rel="stylesheet" href="css/master.css">
+    </head>
+    <body id="testvlak" onmousemove="coordinate(event)">
+    
+        <h3>Coordinaat</h3>
+
+        <div class="coor" id="coor"></div>
+    </body>
+    <script>
+
+    // function coordinate(e){
+
+        // };
+
+        window.addEventListener("load", function(){
+            console.log("window geladen");
+            document.getElementById("testvlak").addEventListener("mousemove" , function(){
+                console.log("event mouse over");
+                var x = event.clientX;
+                var y = event.clientY;
+                var plaats = "X-coordinaat: " + x + "<br>" + " Y-coordinaat: " + y;
+                document.getElementById("coor").innerHTML = plaats;
+
+        });
+    });
+    </script>
+</html>
